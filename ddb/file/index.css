@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	tab-size: 2em;
+	font-family: Consolas,D2Coding,"Microsoft Yahei";
+}
+*[lang="jp"] {
+	font-family: D2Coding,"MS PGhotic";
+}
+
+body {
+	display: grid;
+	grid-template: auto repeat(3, 1fr) / 2fr 1fr;
+	grid-auto-flow: dense;
+	min-height: 50vh;
+}
+
+textarea {
+	width: 100%;
+	height: 100%;
+}
+
+div {
+	border: 1px solid #eee;
+}
+
+tr:nth-child(2n+1) td {
+	background: #eee;
+}
+th, td {
+	font-size: small;
+	vertical-align: top;
+}
+
+#drop {
+	border: 2px dashed #ccc;
+	background: #eee;
+	grid-area: 1/2/5/3
+}
+
+.modify {
+	-webkit-user-modify: read-write;
+	-moz-user-modify: read-write;
+	-ms-user-modify: read-write;
+}
+
+.source, .target {
+	width: 30%;
+	word-break: break-word;
+	white-space: pre-line;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

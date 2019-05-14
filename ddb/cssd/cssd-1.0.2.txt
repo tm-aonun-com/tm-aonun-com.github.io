@@ -1,0 +1,26 @@
+API
+
+cssd.set(selector, value)           修改css值，value支持字符串或对象
+cssd.get(selector)                  返回css对象
+cssd.get(selector).toString()       返回css字符串
+cssd.all                            遍历document.styleSheets后将其重组为新对象
+
+
+
+Ex:
+
+set('body', 'color:red')
+set('body', {color:'red'})
+
+
+getText('body')
+get('body')
+注意：如果dom没有完成加载，则采用promise进行读取。
+get('body').then(value=> console.log(value))
+
+
+
+更新日志
+1.0.0         新建
+1.0.1         重组 styled 代码，并改名为 cssd
+1.0.2         修正了 cssd.get(selector).toString() 的错误

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script src="cachedworker.js"></script>
+	<title>worker manager</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+	let { log } = console;
+
+	let cw = new CachedWorker('test', function () {
+		let { log } = console;
+		let _e
+		onmessage = function (e) {
+			let { data } = e
+			log(data)
+			data.time = Date.now()
+			postMessage(data)
+		}
+	}, function (e) {
+		let { data } = e
+		log(this, e)
+
+	})
+
+	let o = { a: 1, b: 2 }
+	log(cw)
+	cw.postMessage({ text: 'nihao', o })
+
+
+
+</script>

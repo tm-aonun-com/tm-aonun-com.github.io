@@ -1,0 +1,12 @@
+## 实例
+
+```javascript
+let args, result, text;
+text = '안녕하세요, {0}님!, 방금전 {rank}로 진급되었습니다. 현제 전투력 {point}포인트입니다.'
+args = ['엘리스'];
+args.rank = '상교';
+args.point = 99999;
+
+result = encodeArgs(text, args);
+console.log(result);// 안녕하세요, 엘리스님!, 방금전 상교로 진급되었습니다. 현제 전투력 99999포인트입니다.
+```

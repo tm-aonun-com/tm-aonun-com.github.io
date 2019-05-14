@@ -1,0 +1,18 @@
+API
+
+styleD.set(selector, value)
+styleD.get(selector)
+styleD.getText(selector)
+
+
+
+Ex:
+
+set('body', 'color:red')
+set('body', {color:'red'})
+
+
+getText('body')
+get('body')
+注意：如果dom没有完成加载，则采用promise进行读取。
+get('body').then(value=> console.log(value))
