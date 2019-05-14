@@ -1,0 +1,15 @@
+#app {
+	background-color: #ccc;
+	margin: 0 auto;
+	width:400px;
+}
+
+pre {
+	margin: 20px;
+	background: #ff0;
+}
+
+.box {
+	height: 10vh;
+	background: #336;
+}
